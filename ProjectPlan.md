@@ -4,6 +4,7 @@
 
 **Team**
 
+Both members will collaborate on every step of the project, with tasks consisting of cleaning each respective dataset and conducting exploratory analysis. 
 
 
 **Research Question**
@@ -18,55 +19,47 @@
 
 This dataset contains information on all US universities, including institutional characteristics, costs, and student outcomes. 
 
-**License**: Public Domain
+- **License**: Public Domain
 
-**Copyright**: No copyright restrictions or licensing fees
+- **Copyright**: No copyright restrictions or licensing fees
 
-**Terms of Use**: No License required. Commercial use and redistribution 
+- **Terms of Use**: No License required. Commercial use and redistribution 
 
-**Privacy and Confidentiality**: To protect student privacy, the data reported in the College Scorecard dataset is aggregated across institutions and student populations. Individual student records are not included, and sensitive information that could identify specific individuals is either excluded or summarized. In some cases, values may be suppressed or omitted when the number of observations is too small to ensure anonymity.
+- **Privacy and Confidentiality**: To protect student privacy, the data reported in the College Scorecard dataset is aggregated across institutions and student populations. Individual student records are not included, and sensitive information that could identify specific individuals is either excluded or summarized. In some cases, values may be suppressed or omitted when the number of observations is too small to ensure anonymity.
 
-**Consent**: Mandated public disclosure (Public Domain)
+- **Consent**: Mandated public disclosure (Public Domain)
 
-**Citation**: U.S. Department of Education. (n.d.). College Scorecard data. College Scorecard. https://collegescorecard.ed.gov/data/
+- **Citation**: U.S. Department of Education. (n.d.). College Scorecard data. College Scorecard. https://collegescorecard.ed.gov/data/
 
 **2) U.S. Athletics Data**
 
-https://ope.ed.gov/athletics/#/datafile/list 
+This dataset contains 2023-2024 athletics information for all U.S. universities. Variables from this dataset include information detailing athletics recruiting expenses, total   revenue generated, and total participants per team. We plan to use the information from this dataset to examine the relationship between U.S. university athletics and general      student body characteristics.
 
-This dataset contains 2023-2024 athletics information for all U.S. universities. Variables from this dataset include information detailing athletics recruiting expenses, total revenue generated, and total participants per team. We plan to use the information from this dataset to examine the relationship between U.S. university athletics and general student body characteristics.
+- **License**: Public Domain
 
-**License**: Public Domain
+- **Copyright**: No copyright restrictions or licensing fees. Users are free to reproduce, modify, and distribute the data.
 
-**Copyright**: No copyright restrictions or licensing fees. Users are free to reproduce, modify, and distribute the data.
+- **Terms of Use**: No License required. Commercial use and redistribution are permitted.
 
-**Terms of Use**: No License required. Commercial use and redistribution are permitted.
+- **Privacy and Confidentiality**: The dataset is aggregated at the institutional level and provides totals for participants, coaching staff, and revenues/expenses, but does not   contain names or any unique identifiers. FERPA compliant.
 
-**Privacy and Confidentiality**: The dataset is aggregated at the institutional level and provides totals for participants, coaching staff, and revenues/expenses, but does not contain names or any unique identifiers. FERPA compliant.
+- **Consent**: Mandated public disclosure (Public Domain)
 
-**Consent**: Mandated public disclosure (Public Domain)
-
-**Citation**: U.S. Department of Education, Office of Postsecondary Education. Equity in Athletics Data Analysis (EADA). [Year of Data]. Available at: https://ope.ed.gov/athletics/
+- **Citation**: U.S. Department of Education, Office of Postsecondary Education. Equity in Athletics Data Analysis (EADA). [Year of Data]. Available at:                         https://ope.ed.gov/athletics/
 
 **Timeline**
 
-**Step 1**: cleaning & data integration (each person will clean one dataset)
+  - **Step 1**: cleaning & data integration (each person will clean one dataset)
 
-**Steps 2 & 3**: exploratory data management 
+  - **Steps 2 & 3**: exploratory data management 
 
-**Steps 4 & 5**: conduct data analysis to answer each research question (each person will do analysis on one research question)
+  - **Steps 4 & 5**: conduct data analysis to answer each research question (each person will do analysis on one research question)
 
-**Step 6**: Documentation write-up with evidence
+  - **Step 6**: Documentation write-up with evidence
 
-**Step 7**: Finalize report
+  - **Step 7**: Finalize report
 
-**Constraints**
-
-One limitation of the College Scorecard dataset is the lack of clarity regarding the time frame used for certain variables. It is sometimes unclear whether the reported values represent a single academic year, a specific student cohort, or an aggregate across multiple years. This ambiguity may make it more difficult to interpret the results accurately or compare variables consistently across institutions.
-
-Additionally, since the athletic data is self-reported by institutions to demonstrate Title IX compliance, there may be an incentive for universities to boost participation numbers for female athletes. Additionally, there is no standardized categorization for how expenses and revenues are calculated between universities, so certain institutions may have varying calculations.
+**Constraints:** One limitation of the College Scorecard dataset is the lack of clarity regarding the time frame used for certain variables. It is sometimes unclear whether the reported values   represent a single academic year, a specific student cohort, or an aggregate across multiple years. This ambiguity may make it more difficult to interpret the results accurately or compare variables consistently across institutions. Additionally, since the athletic data is self-reported by institutions to demonstrate Title IX compliance, there may be an incentive for universities to boost participation numbers for female athletes. Additionally, there is no standardized categorization for how expenses and revenues are calculated between universities, so certain institutions may have varying calculations.
 
 
-**Gaps**
-
-Our data does not contain information on the total university enrollment (only information on the size of the fall 2023 cohort).
+**Gaps:** Our data does not contain information on the total university enrollment (only information on the size of the fall 2023 cohort).
