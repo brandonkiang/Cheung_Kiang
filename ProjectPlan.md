@@ -4,7 +4,7 @@
 
 **Team**
 
-Both members will collaborate on every step of the project, with tasks consisting of cleaning each respective dataset and conducting exploratory analysis. 
+Both members will collaborate on every step of the project, with tasks consisting of cleaning each respective dataset and conducting exploratory analysis.
 
 
 **Research Question**
@@ -49,7 +49,8 @@ This dataset contains 2023-2024 athletics information for all U.S. universities.
 
 **Timeline**
 
-  - **Step 1**: cleaning & data integration (each person will clean one dataset)
+  - **Step 1**: Cleaning & Data Integration
+    - Both datasets will be collected through CSV files downloaded through their respective websites and cleaned to only contains specific columns of interest. Each member will work on cleaning one particular dataset, while still providing advice on how to format the data as to render it useful. Following the cleaning process, we may consider merging the two datasets on the university ID variable such that each row represents a U.S. university and the columns provide descriptive statistics such as acceptance rate, SAT/ACT scores,  and athletics revenue/expenses, among others.
 
   - **Steps 2 & 3**: exploratory data management 
 
