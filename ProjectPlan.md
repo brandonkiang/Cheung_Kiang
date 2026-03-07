@@ -15,10 +15,8 @@ Both members will collaborate on every step of the project, with tasks consistin
 
 
 ### **Research Question**
-1) How does the size of the incoming cohort moderate the relationship between total athletic recruiting expenses and total athletic revenue?
-
+1) Do colleges in the top quartile of academic selectivity (based on the incoming cohort's median ACT/SAT scores / acceptance rate) generate significantly different total athletic revenue than colleges in the bottom quartile?
 2) How does the size of the incoming cohort moderate the relationship between total athletic recruiting expenses and total athletic revenue?
-
 
 ### **Datasets**
 
@@ -60,14 +58,17 @@ This dataset contains 2023-2024 athletics information for all U.S. universities.
   - **Step 1**: Cleaning & Data Integration
     - Both datasets will be collected through CSV files downloaded through their respective websites and cleaned to only contains specific columns of interest. Each member will work on cleaning one particular dataset, while still providing advice on how to format the data as to render it useful. Following the cleaning process, we may consider merging the two datasets on the university ID variable such that each row represents a U.S. university and the columns provide descriptive statistics such as acceptance rate, SAT/ACT scores,  and athletics revenue/expenses, among others.
 
-  - **Steps 2 & 3**: exploratory data management 
+  - **Steps 2 & 3**: exploratory data management
+    - Evaluate trends between athletics revenue/expenses and admission sizes/academic statistics. 
 
   - **Steps 4 & 5**: conduct data analysis to answer each research question (each person will do analysis on one research question)
-
+    - Based on the trends identified in steps 2 and 3, conduct analyses that answer the respective research questions. Each member will work primarily on one research question but will collaborate to ensure the findings are thorough, in-depth, and fully answer the question of interest.
+   
   - **Step 6**: Documentation write-up with evidence
+    - Document the metadata so that the variables of interest are easy to understand. Both members will collaborate on documenting.
 
   - **Step 7**: Finalize report
-
+    - Make sure all the metadata and instructions for reproducibility are clearly outlined. Provide steps for cleaning, integration, and exploratory analysis of data such that anyone with these instructions can understand the data and how our analyses/findings were discovered.
 
 ### **Constraints:** 
 One limitation of the College Scorecard dataset is the lack of clarity regarding the time frame used for certain variables. It is sometimes unclear whether the reported values   represent a single academic year, a specific student cohort, or an aggregate across multiple years. This ambiguity may make it more difficult to interpret the results accurately or compare variables consistently across institutions. Additionally, since the athletic data is self-reported by institutions to demonstrate Title IX compliance, there may be an incentive for universities to boost participation numbers for female athletes. Additionally, there is no standardized categorization for how expenses and revenues are calculated between universities, so certain institutions may have varying calculations.
