@@ -1,0 +1,131 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "institution_name",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column institution_name using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "institution_name",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column institution_name using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "institution_name",
+    "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column institution_name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sector_name",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column sector_name by separator"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city_txt",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column city_txt using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "sector_name 1",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column sector_name 1 using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip_text",
+    "expression": "grel:if(value.length() == 9, value.replace(/^(\\d{5})(\\d{4})$/, \"$1-$2\"), value)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column zip_text using expression grel:if(value.length() == 9, value.replace(/^(\\d{5})(\\d{4})$/, \"$1-$2\"), value)"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "sector_name 1",
+    "newColumnName": "institution_type",
+    "description": "Rename column sector_name 1 to institution_type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "sector_name 2",
+    "newColumnName": "institution_years",
+    "description": "Rename column sector_name 2 to institution_years"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "zip_text",
+    "newColumnName": "zip",
+    "description": "Rename column zip_text to zip"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "state_cd",
+    "newColumnName": "state",
+    "description": "Rename column state_cd to state"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "city_txt",
+    "newColumnName": "city",
+    "description": "Rename column city_txt to city"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "OPEID",
+    "newColumnName": "opeid",
+    "description": "Rename column OPEID to opeid"
+  }
+]
