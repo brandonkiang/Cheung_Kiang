@@ -34,8 +34,10 @@ In the week prior to the deadline of the project, we will perform conclusions ba
 
 ### **Week 15: Documentation Write-Up (Due 05/03)**
 Following the generation of our conclusion, we will fine-tune our documentation to ensure everything is properly labeled and easy to understand. To ensure proper documentation, we aim to start fresh from a blank workspace and follow our detailed steps to ensure reproducibility. This includes ensuring the data collection, cleaning, processing, and analyzation processes are all consistent with what we wrote and discussed throughout the project.
-Week 16: Finalize Report (Due 05/05)
+
+### **Week 16: Finalize Report (Due 05/05)**
 By the beginning of week 16 prior to the project deadline of May 5th, we aim to finalize any loose ends within the project. This will likely consist of ensuring our project accurately follows our data lifecycle and is reproducible.
+
 
 ## Changes
 Based on the feedback received from milestone 2, we have updated the team member roles and responsibilities to properly distinguish what tasks each group member will be responsible for and aim to accomplish throughout the duration of the project as follows: 
@@ -49,10 +51,17 @@ Based on the feedback received from milestone 2, we have updated the team member
 
 Note that while each individual will work primarily on their own dataset, they will still collaborate to ensure analyses and findings are accurate and informative. Additionally, some steps will require collaboration such as the data cleaning process to ensure the corresponding attributes are standardized and ready for integration.
 
+Changing the timeline structure:
+We changed the structure of the timeline to include week numbers and dates that properly detail when certain tasks are expected to be completed by. As opposed to simply being a sequence of steps, there are now specific date deadlines associated with the tasks to maintain structure and order throughout the project, ensuring the group is on top of all work and does not fall behind the weekly deadlines.
+
+
 ## Challenges
 * The college scorecard data had ~6400 rows before integration, and significant amounts of missing values in some variables. After integration, there are ~2000 rows left (similar in size to the athletics data). However, there are still significant amounts of missing data (~1000) for some attributes (i.e., SAT and ACT score variables). Since our first research question depends on those attributes, we might consider formulating a different research question. Next week, we will try different methods of handling missing values. However, since over half the values are missing, we are not as optimistic.
+
+* During the integration process, there were a few issues surrounding duplicate values that made the output seem to be larger than expected. To resolve this issue, we conducted data fusion and chose the admissions data to be of higher priority when considering duplicate values.
+
 
 
 ## Member Contributions
 * **Rachel:** First, I collected 2023-2024 college data from https://collegescorecard.ed.gov/data/. Then, I imported the CSV into a Jupyter Notebook and, using the data dictionary, I selected the columns most relevant for answering our research questions. To prepare the data for integration, I cleaned it by renaming columns, mapping variables for readability, and converting them to lowercase for consistency. Lastly, I uploaded the Jupyter Notebook I used for cleaning and the cleaned CSV. For the milestone updates, I contributed to the timeline and wrote part of the challenges we faced.
-* **Brandon:** 
+* **Brandon:** In this milestone, I went through the process of collecting, cleaning, and integrating data for our project. First, I collected the raw 2024 college athletics data from https://ope.ed.gov/athletics/ as an excel file. After collecting the data, I conducted the cleaning process through OpenRefine, with major changes being the standardization of variables. For instance, I changed various variables to lowercase, trimmed whitespace, and renamed variables to match the casing/structure of the admissions dataset. Furthermore, I split the column detailing whether the college is public or private and the length of the university into two separate rows to match the structure of the admissions data. Finally, I reformatted the zip codes to ensure there was a hyphen included between the first 5 digits and the last 4 digits if applicable. Once the data was cleaned, I pulled the two cleaned datasets and integrated them through blocking and record linkage as mentioned above.
