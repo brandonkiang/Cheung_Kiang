@@ -1,1 +1,0 @@
-This file includes the data cleaning pipeline for the athletics data. First reference the history.json file to access OpenRefine cleaning history and then the Jupyter Notebook to see which variables were selected as well as their corresponding data dictionary.
