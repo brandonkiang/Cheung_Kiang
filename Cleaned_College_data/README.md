@@ -1,1 +1,0 @@
-This file includes the data cleaning for the college scorecard data. The data was uploaded into the Jupyter Notebook, and using the data dictionary, variables were selected based on their relevance to the research questions.
