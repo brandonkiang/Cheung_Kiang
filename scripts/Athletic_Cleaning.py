@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 
 mbb = pd.read_csv("../data/cbb_records_2019_2024.csv", header = 1)
@@ -60,7 +61,10 @@ for i in range(len(records_combined)):
     regular_season_champ.append(season_champ)
 
 cleaned_data = records_combined.copy()
-cleaned_data["Conference Tournament Champion"] = tournament_champ
+cleaned_data["Conference_Tournament_Champion"] = tournament_champ
 # cleaned_data["Conference Regular Season Champion"] = regular_season_champ
 
-cleaned_data.to_csv("../cleaned_data/cleaned_college_basketball.csv", index=False)
+if not os.path.exists("cleaned_data"):
+    os.makedirs("cleaned_data")
+
+cleaned_data.to_csv("cleaned_data/cleaned_college_basketball.csv", index=False)

@@ -1,8 +1,7 @@
 import pandas as pd
-import recordlinkage as rl
 
-basketball = pd.read_csv("../cleaned_data/cleaned_college_basketball.csv")
-scorecard = pd.read_csv("../cleaned_data/scorecard_cleaned.csv")
+basketball = pd.read_csv("cleaned_data/cleaned_college_basketball.csv")
+scorecard = pd.read_csv("cleaned_data/scorecard_cleaned.csv")
 
 basketball_to_scorecard = {
     "abilene christian": "abilene christian university",
@@ -380,4 +379,4 @@ basketball["clean_name"] = basketball["School"].apply(get_scorecard_name)
 
 merged_df = pd.merge(scorecard, basketball, how = "inner", left_on = ["institution_name", "year"], right_on = ["clean_name", "Year"])
 
-merged_df.to_csv("../cleaned_data/integrated_data.csv", index = False)
+merged_df.to_csv("cleaned_data/integrated_data.csv", index = False)
