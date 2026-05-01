@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 
-mbb = pd.read_csv("../data/cbb_records_2019_2024.csv", header = 1)
+mbb = pd.read_csv("data/cbb_records_2019_2024.csv", header = 1)
 mbb.drop(["Unnamed: 8_level_1", "Unnamed: 11_level_1", "Unnamed: 14_level_1", "Unnamed: 17_level_1", "Unnamed: 20_level_1"], axis=1, inplace=True)
 mbb.rename(columns = {"W.1": "Conference_Wins", "L.1" : "Conference_Losses", "W.2": "Home_wins", "L.2": "Home_losses", "W.3": "Away_wins", "L.3": "Away_losses", "Unnamed: 38": "Year"}, inplace=True)
 
@@ -13,7 +13,7 @@ mbb["School"] = mbb["School"].str.lower().str.strip()
 mbb["Gender"] = "Male"
 
 
-wcbb = pd.read_csv("../data/wcbb_records_2019_2024.csv", header=1)
+wcbb = pd.read_csv("data/wcbb_records_2019_2024.csv", header=1)
 wcbb.drop(["Unnamed: 8_level_1", "Unnamed: 11_level_1", "Unnamed: 14_level_1", "Unnamed: 17_level_1", "Unnamed: 20_level_1"], axis=1, inplace=True)
 wcbb.rename(columns = {"W.1": "Conference_Wins", "L.1" : "Conference_Losses", "W.2": "Home_wins", "L.2": "Home_losses", "W.3": "Away_wins", "L.3": "Away_losses", "Unnamed: 38": "Year"}, inplace=True)
 
@@ -26,14 +26,14 @@ wcbb["Gender"] = "Female"
 records_combined = pd.concat([mbb, wcbb]).reset_index(drop = True)
 
 
-cbb_champs = pd.read_csv("../data/cbb_champions_2019_2024.csv")
+cbb_champs = pd.read_csv("data/cbb_champions_2019_2024.csv")
 cbb_champs["Conference"] = cbb_champs["Conference"].str.lower().str.strip()
 cbb_champs["Regular Season Champ"] = cbb_champs["Regular Season Champ"].str.lower().str.strip()
 cbb_champs["Tournament Champ"] = cbb_champs["Tournament Champ"].str.lower().str.strip()
 cbb_champs["Gender"] = "Male"
 
 
-wcbb_champs = pd.read_csv("../data/wcbb_champs_2019_2024.csv")
+wcbb_champs = pd.read_csv("data/wcbb_champs_2019_2024.csv")
 wcbb_champs["Conference"] = wcbb_champs["Conference"].str.lower().str.strip()
 wcbb_champs["Regular Season Champ"] = wcbb_champs["Regular Season Champ"].str.lower().str.strip()
 wcbb_champs["Tournament Champ"] = wcbb_champs["Tournament Champ"].str.lower().str.strip()
