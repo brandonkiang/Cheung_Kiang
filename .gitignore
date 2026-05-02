@@ -3,4 +3,6 @@ scripts/apikey.txt
 __pycache__/
 *.pyc
 *.pyo
-.DS_Store.snakemake/
+
+.DS_Store
+.snakemake/
