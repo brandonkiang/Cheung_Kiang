@@ -64,6 +64,15 @@ Furthermore, there were some issues dealing with the terms of use for scraping t
 
 ## Reproducing
 These are the steps to follow to produce our results.
+
+#### NOTE: To reproduce all findings and results from this project workflow, it is recommended to either use a virtual environment and install the dependencies from the “requirements.txt” file or simply install the dependencies on your local machine.
+
+To use a virtual machine:
+1) Run `python -m venv .venv` in the terminal of your project directory
+2) Activate the virtual environment by running `source .venv/bin/activate` in the terminal
+3) Install all library dependencies by running `pip install -r requirements.txt`
+4) To run all scripts in sequence and obtain the results, run `snakemake run_all –cores 1` in the terminal of your project directory
+
 #### Acquire College Scorecard data
 The College Scorecard Dataset is accessible as an API, which was how it was accessed for this project. 
 1) Navigate to the College Scorecard Dataset website. This link will take you directly to the page where you can request an API key: [College Scorecard API Documentation](https://collegescorecard.ed.gov/data/api-documentation/). Once you have filled out the form, the API key will be emailed to you.
