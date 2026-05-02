@@ -93,5 +93,5 @@ hash_scorecard = hash_csv_file("data/scorecard.csv")
 if not os.path.exists("sha-256_hash_values"):
     os.makedirs("sha-256_hash_values")
 
-with open("sha-256_hash_values/SHA-256_mbb.txt", "w") as f:
+with open("sha-256_hash_values/SHA-256_scorecard.txt", "w") as f:
     f.write(hash_scorecard)
