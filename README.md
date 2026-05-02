@@ -65,4 +65,10 @@ The College Scorecard Dataset is accessible as an API, which was how it was acce
 2) Create a txt file within the [scripts folder](https://github.com/brandonkiang/Cheung_Kiang/tree/main/scripts) to store your API key.
 3) Create a `.gitignore` file and include the text file containing the API key.
 4) After this, the provided script should be able to run with no issues.
+
+#### Acquire College Basketball data
+The College Basketball data is collected using the `requests` libary in Python.
+1) Scrape the Sports Reference college basketball website using the requests library from within Python, specifying the specific years of interest (2019-2024) and concatenating those results into one large dataframe
+2) Ensure that when scraping this data, you provide some buffer time so as to not violate the terms of use for the data. The specific terms of use specify that users can make at most 20 requests per minute or they will otherwise have their IP banned for up to 24 hours.
+
 ## References
