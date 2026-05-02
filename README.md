@@ -92,7 +92,7 @@ The College Scorecard Dataset is accessible as an API, which was how it was acce
 #### NOTE: To reproduce all findings and results from this project workflow, it is recommended to either use a virtual environment and install the dependencies from the “requirements.txt” file or simply install the dependencies on your local machine.
 
 To use a virtual machine:
-1) Run `python -m venv .venv` in the terminal of your project directory
+1) Run `python -m venv .venv` or `python3 -m venv .venv` in the terminal of your project directory
 2) Activate the virtual environment by running `source .venv/bin/activate` in the terminal
 3) Install all library dependencies by running `pip install -r requirements.txt`
 4) To run all scripts in sequence and obtain the results, run `snakemake run_all –cores 1` in the terminal of your project directory
