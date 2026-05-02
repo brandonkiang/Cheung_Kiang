@@ -27,23 +27,13 @@ def scrape_cbb_data(start_year, end_year):
                 df_year['Year'] = year
                 all_records.append(df_year)
 
-        summary_url = f"https://www.sports-reference.com/cbb/seasons/men/{year}.html"
-        summ_response = requests.get(summary_url)
-        try:
-            df_conf = pd.read_html(summ_response.text, attrs={'id': 'conference-summary'})[0]
-            df_conf['Year'] = year
-            all_champions.append(df_conf)
-        except:
-            pass
-
         time.sleep(15)
 
     final_records = pd.concat(all_records, ignore_index=True)
-    final_champs = pd.concat(all_champions, ignore_index=True)
     
-    return final_records, final_champs
+    return final_records
 
-records, champs = scrape_cbb_data(2019, 2024)
+records = scrape_cbb_data(2019, 2024)
 
 if not os.path.exists("data"):
     os.makedirs("data")
@@ -52,7 +42,6 @@ if not os.path.exists("data"):
 # champs.to_csv("../data/cbb_champions_2019_2024.csv", index = False)
 
 records.to_csv("data/cbb_records_2019_2024.csv", index = False)
-champs.to_csv("data/cbb_champions_2019_2024.csv", index = False)
 
 def scrape_wcbb_data(start_year, end_year):
     all_records = []
@@ -77,23 +66,12 @@ def scrape_wcbb_data(start_year, end_year):
                 df_year['Year'] = year
                 all_records.append(df_year)
 
-        summary_url = f"https://www.sports-reference.com/cbb/seasons/women/{year}.html"
-        summ_response = requests.get(summary_url)
-        try:
-            df_conf = pd.read_html(summ_response.text, attrs={'id': 'conference-summary'})[0]
-            df_conf['Year'] = year
-            all_champions.append(df_conf)
-        except:
-            pass
-
         time.sleep(15)
 
     final_records = pd.concat(all_records, ignore_index=True)
-    final_champs = pd.concat(all_champions, ignore_index=True)
     
-    return final_records, final_champs
+    return final_records
 
-records_w, champs_w = scrape_wcbb_data(2019, 2024)
+records_w = scrape_wcbb_data(2019, 2024)
 
 records_w.to_csv("data/wcbb_records_2019_2024.csv", index = False)
-champs_w.to_csv("data/wcbb_champs_2019_2024.csv", index = False)
