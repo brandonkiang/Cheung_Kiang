@@ -65,7 +65,8 @@ df["preds2"] = grid_search2.predict(X_vars2)
 sns.set_theme(style="whitegrid")
 fig, axes = plt.subplots(1, 2, figsize=(16, 6))
 
-sns.boxplot(ax=axes[0], x='institution_type', y='W-L%', data=df, palette="Set2")
+sns.boxplot(ax=axes[0], x='institution_type', y='W-L%', data=df,
+            hue='institution_type', palette="Set2", legend=False)
 axes[0].set_title('Distribution of W-L% by Institution Type')
 axes[0].set_xlabel('Institution Type')
 axes[0].set_ylabel('W-L%')
@@ -78,4 +79,3 @@ axes[1].set_ylabel('Predicted W-L%')
 
 plt.tight_layout()
 plt.savefig('visualizations/analysis_visualizations.png')
-plt.show()

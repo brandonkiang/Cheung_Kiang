@@ -1,0 +1,100 @@
+Assuming unrestricted shared filesystem usage.
+host: rachels-MacBook-Pro.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+acquire_data_academics         1
+acquire_data_basketball        1
+clean_data_academics           1
+clean_data_basketball          1
+data_integration               1
+data_analysis                  1
+run_all                        1
+total                          7
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 14:06:26 2026]
+localrule acquire_data_academics:
+    output: data/scorecard.csv
+    jobid: 4
+    reason: Forced execution
+    resources: tmpdir=/var/folders/n8/tmkf7hz167v4jm5bk7yym8z00000gn/T
+Select jobs to execute...
+[Sat May  2 14:11:57 2026]
+Finished jobid: 4 (Rule: acquire_data_academics)
+1 of 7 steps (14%) done
+Execute 1 jobs...
+[Sat May  2 14:11:57 2026]
+localrule clean_data_academics:
+    input: data/scorecard.csv
+    output: cleaned_data/scorecard_cleaned.csv
+    jobid: 3
+    reason: Forced execution
+    resources: tmpdir=/var/folders/n8/tmkf7hz167v4jm5bk7yym8z00000gn/T
+Select jobs to execute...
+[Sat May  2 14:12:05 2026]
+Finished jobid: 3 (Rule: clean_data_academics)
+2 of 7 steps (29%) done
+Execute 1 jobs...
+[Sat May  2 14:12:05 2026]
+localrule acquire_data_basketball:
+    output: data/cbb_records_2019_2024.csv, data/wcbb_records_2019_2024.csv
+    jobid: 6
+    reason: Forced execution
+    resources: tmpdir=/var/folders/n8/tmkf7hz167v4jm5bk7yym8z00000gn/T
+[Sat May  2 14:15:10 2026]
+Finished jobid: 6 (Rule: acquire_data_basketball)
+3 of 7 steps (43%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 14:15:10 2026]
+localrule clean_data_basketball:
+    input: data/cbb_records_2019_2024.csv, data/wcbb_records_2019_2024.csv
+    output: cleaned_data/cleaned_college_basketball.csv
+    jobid: 5
+    reason: Forced execution
+    resources: tmpdir=/var/folders/n8/tmkf7hz167v4jm5bk7yym8z00000gn/T
+[Sat May  2 14:15:10 2026]
+Finished jobid: 5 (Rule: clean_data_basketball)
+4 of 7 steps (57%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 14:15:10 2026]
+localrule data_integration:
+    input: cleaned_data/scorecard_cleaned.csv, cleaned_data/cleaned_college_basketball.csv
+    output: cleaned_data/integrated_data.csv
+    jobid: 2
+    reason: Forced execution
+    resources: tmpdir=/var/folders/n8/tmkf7hz167v4jm5bk7yym8z00000gn/T
+[Sat May  2 14:15:11 2026]
+Finished jobid: 2 (Rule: data_integration)
+5 of 7 steps (71%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 14:15:11 2026]
+localrule data_analysis:
+    input: cleaned_data/integrated_data.csv
+    output: visualizations/analysis_visualizations.png
+    jobid: 1
+    reason: Forced execution
+    resources: tmpdir=/var/folders/n8/tmkf7hz167v4jm5bk7yym8z00000gn/T
+[Sat May  2 14:16:43 2026]
+Finished jobid: 1 (Rule: data_analysis)
+6 of 7 steps (86%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sat May  2 14:16:43 2026]
+localrule run_all:
+    input: visualizations/analysis_visualizations.png
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/var/folders/n8/tmkf7hz167v4jm5bk7yym8z00000gn/T
+[Sat May  2 14:16:43 2026]
+Finished jobid: 0 (Rule: run_all)
+7 of 7 steps (100%) done
+Complete log(s): /Users/rachelcheung/Cheung_Kiang/.snakemake/log/2026-05-02T140625.480988.snakemake.log

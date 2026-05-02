@@ -1,6 +1,7 @@
 import requests
 import csv
 import os
+import hashlib
 
 script_dir = os.path.dirname(__file__)
 file_path = os.path.join(script_dir, "apikey.txt")
@@ -79,3 +80,18 @@ if all_results:
     print(f"Saved {len(all_results)} schools to {output_file}")
 else:
     print("No results found.")
+
+def hash_csv_file(file_path):
+    sha256_hash = hashlib.sha256()
+    with open(file_path, "rb") as f:
+        for byte_block in iter(lambda: f.read(4096), b""):
+            sha256_hash.update(byte_block)
+    return sha256_hash.hexdigest()
+
+hash_scorecard = hash_csv_file("data/scorecard.csv")
+
+if not os.path.exists("sha-256_hash_values"):
+    os.makedirs("sha-256_hash_values")
+
+with open("sha-256_hash_values/SHA-256_mbb.txt", "w") as f:
+    f.write(hash_scorecard)
