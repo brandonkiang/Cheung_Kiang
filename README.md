@@ -95,7 +95,7 @@ To use a virtual machine:
 1) Run `python -m venv .venv` or `python3 -m venv .venv` in the terminal of your project directory
 2) Activate the virtual environment by running `source .venv/bin/activate` in the terminal
 3) Install all library dependencies by running `pip install -r requirements.txt`
-4) To run all scripts in sequence and obtain the results, run `snakemake run_all –cores 1` in the terminal of your project directory
+4) To run all scripts in sequence and obtain the results, run `snakemake run_all --cores 1` in the terminal of your project directory
 
 ## References
 U.S. Department of Education. (n.d.). College Scorecard data [Data set]. College Scorecard. https://collegescorecard.ed.gov/data/
