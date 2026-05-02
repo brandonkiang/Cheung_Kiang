@@ -3,6 +3,7 @@ import pandas as pd
 import time
 import os
 from io import StringIO
+import hashlib
 
 def scrape_cbb_data(start_year, end_year, gender="men"):
     all_records = []
@@ -40,3 +41,22 @@ records_w = scrape_cbb_data(2019, 2024, "women")
 
 records.to_csv("data/cbb_records_2019_2024.csv", index=False)
 records_w.to_csv("data/wcbb_records_2019_2024.csv", index=False)
+
+def hash_csv_file(file_path):
+    sha256_hash = hashlib.sha256()
+    with open(file_path, "rb") as f:
+        for byte_block in iter(lambda: f.read(4096), b""):
+            sha256_hash.update(byte_block)
+    return sha256_hash.hexdigest()
+
+hash_mbb = hash_csv_file("data/cbb_records_2019_2024.csv")
+hash_wbb = hash_csv_file("data/wcbb_records_2019_2024.csv")
+
+if not os.path.exists("sha-256_hash_values"):
+    os.makedirs("sha-256_hash_values")
+
+with open("sha-256_hash_values/SHA-256_mbb.txt", "w") as f:
+    f.write(hash_mbb)
+
+with open("sha-256_hash_values/SHA-256_wbb.txt", "w") as f:
+    f.write(hash_wbb)
