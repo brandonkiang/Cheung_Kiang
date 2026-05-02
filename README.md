@@ -98,3 +98,30 @@ To use a virtual machine:
 4) To run all scripts in sequence and obtain the results, run `snakemake run_all –cores 1` in the terminal of your project directory
 
 ## References
+U.S. Department of Education. (n.d.). College Scorecard data [Data set]. College Scorecard. https://collegescorecard.ed.gov/data/
+
+Sports Reference College Basketball. (2019). 2018-19 Men's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/men/2019-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2019). 2018-19 Women's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/women/2019-school-stats.html#all_basic_school_stats
+
+Sports Reference College Basketball. (2020). 2019-20 Men's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/men/2020-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2020). 2019-20 Women's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/women/2020-school-stats.html#all_basic_school_stats
+
+Sports Reference College Basketball. (2021). 2020-21 Men's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/men/2021-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2021). 2020-21 Women's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/women/2021-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2022). 2021-22 Men's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/men/2022-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2022). 2021-22 Women's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/women/2022-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2023). 2022-23 Men's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/men/2023-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2023). 2022-23 Women's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/women/2023-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2024). 2023-24 Men's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/men/2024-school-stats.html#all_basic_school_stats 
+
+Sports Reference College Basketball. (2024). 2023-24 Women's College Basketball School Stats [Data set]. Sports Reference LLC. https://www.sports-reference.com/cbb/seasons/women/2024-school-stats.html#all_basic_school_stats 
+
+Python Software Foundation. (2024). Python (Version 3.12.0) [Programming language]. https://www.python.org/
