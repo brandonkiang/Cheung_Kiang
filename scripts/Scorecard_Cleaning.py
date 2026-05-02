@@ -41,12 +41,12 @@ for yr in years:
     temp = temp.rename(columns=existing_cols)
     year_dfs.append(temp)
 
-df_long = pd.concat(year_dfs, ignore_index=True)
+df_clean = pd.concat(year_dfs, ignore_index=True)
 
 cols = static_fields + year_fields
-df_long = df_long[[c for c in cols if c in df_long.columns]]
+df_clean = df_clean[[c for c in cols if c in df_clean.columns]]
 
-df_long = df_long.rename(columns={
+df_clean = df_clean.rename(columns={
     'year': 'year',
     'id': 'unitid',
     'ope8_id': 'opeid',
@@ -73,14 +73,14 @@ df_long = df_long.rename(columns={
     'cost.avg_net_price.private': 'avg_net_price_private', 
     'aid.pell_grant_rate': 'prop_low_income'})
 
-df_long["institution_type"] = df_long['institution_type'].map({1: 'public', 2: 'private nonprofit', 3: 'private for-profit'})
+df_clean["institution_type"] = df_clean['institution_type'].map({1: 'public', 2: 'private nonprofit', 3: 'private for-profit'})
 
-df_long["institution_years"] = df_long['institution_years'].map({1: '4-year', 2: '2-year', 3: 'Less-than-2-year'})
+df_clean["institution_years"] = df_clean['institution_years'].map({1: '4-year', 2: '2-year', 3: 'Less-than-2-year'})
 
-df_long['test_score_req'] = df_long['test_score_req'].map({1: 'Required', 2: 'Recommended', 3: 'Neither required nor recommended',
+df_clean['test_score_req'] = df_clean['test_score_req'].map({1: 'Required', 2: 'Recommended', 3: 'Neither required nor recommended',
                                                            4: 'Do not know', 5: 'Considered but not required'}).fillna('Do not know')
 
-df_long['institution_name'] = df_long['institution_name'].str.lower()
-df_long['city'] = df_long['city'].str.lower()
+df_clean['institution_name'] = df_clean['institution_name'].str.lower()
+df_clean['city'] = df_clean['city'].str.lower()
 
-df_long.to_csv("data/scorecard_cleaned.csv", index=False)
+df_clean.to_csv("cleaned_data/scorecard_cleaned.csv", index=False)
