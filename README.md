@@ -35,6 +35,13 @@ The College Scorecard dataset is central to both research questions guiding this
 
 ## Data quality
 ### College Basketball Dataset
+The basketball dataset has no concerns regarding semantic accuracy nor syntactic accuracy. All values input in the datasets are within the domain of acceptable values and accurately reflect the true performances of these school programs in their given seasons. Through some cross-referencing with official NCAA statistics, we were able to confirm that the input values correctly reflected true statistics. Therefore, we are satisfied with the accuracy quality of this dataset.
+
+There are some concerns regarding column completeness with respect to the variables detailing information about team success within their conference (“Conference_Wins” and “Conference_Losses”). For instance, some schools such as Howard University and Chicago State have missingness in these two columns, making it particularly difficult to discover their performance in these seasons. However, given that there are over 2300 observations in the men’s dataset and only 5 rows contain missingness in these columns, we do feel relatively comfortable simply dropping these observations and moving forward with the rest of the “full” data. There are seemingly no issues with population completeness as all colleges affiliated with the NCAA are included in these datasets with their college basketball seasons from between 2019 to 2024 considered in the data.
+
+There are no concerns regarding the consistency of the basketball dataset with respect to schematic constraints or integrity violations. All entries in the dataset follow the appropriate integrity constraints and are valid inputs. Additionally, the formatting of the data and the manner in which all inputs are stored are consistent throughout the seasons from 2019 to 2024, allowing us to properly compare statistics from these seasons.
+
+Considering the data we are using fall within the time frames of 2019 to 2024, there are no concerns regarding timely updates of the data. As previously mentioned, the manner in which the data is recorded and stored in the datasets are consistent from 2019 to 2024, so there are no concerns regarding differences in encoding and definitions between these seasons, allowing for direct comparisons with respect to success. However, one small concern is that the 2019 and 2020 seasons are pre-COVID, which could affect some statistics and the scaling of data values. Therefore, there are some potential issues regarding comparisons of statistics prior to COVID and seasons following.
 
 ### College Scorecard Dataset
 The College Scorecard is published directly by the U.S. Department of Education and is compiled from data that institutions are legally required to report through the Integrated Postsecondary Education Data System (IPEDS). This institutional reporting obligation means the core variables, such as institutional control type (public vs. private), undergraduate enrollment, and admissions rates, are fairly accurate as these figures are subject to federal oversight and auditing. However, there are accuracy concerns for some derived or self-reported metrics, as individual institutions are responsible for the accuracy of their submissions, and reporting errors at the institutional level would be reflected in the Scorecard without correction. 
@@ -75,14 +82,6 @@ Furthermore, there were some issues dealing with the terms of use for scraping t
 ## Reproducing
 These are the steps to follow to produce our results.
 
-#### NOTE: To reproduce all findings and results from this project workflow, it is recommended to either use a virtual environment and install the dependencies from the “requirements.txt” file or simply install the dependencies on your local machine.
-
-To use a virtual machine:
-1) Run `python -m venv .venv` in the terminal of your project directory
-2) Activate the virtual environment by running `source .venv/bin/activate` in the terminal
-3) Install all library dependencies by running `pip install -r requirements.txt`
-4) To run all scripts in sequence and obtain the results, run `snakemake run_all –cores 1` in the terminal of your project directory
-
 #### Acquire College Scorecard data
 The College Scorecard Dataset is accessible as an API, which was how it was accessed for this project. 
 1) Navigate to the College Scorecard Dataset website. This link will take you directly to the page where you can request an API key: [College Scorecard API Documentation](https://collegescorecard.ed.gov/data/api-documentation/). Once you have filled out the form, the API key will be emailed to you.
@@ -90,9 +89,12 @@ The College Scorecard Dataset is accessible as an API, which was how it was acce
 3) Create a `.gitignore` file and include the text file containing the API key.
 4) After this, the provided script should be able to run with no issues.
 
-#### Acquire College Basketball data
-The College Basketball data is collected using the `requests` libary in Python.
-1) Scrape the Sports Reference college basketball website using the requests library from within Python, specifying the specific years of interest (2019-2024) and concatenating those results into one large dataframe
-2) Ensure that when scraping this data, you provide some buffer time so as to not violate the terms of use for the data. The specific terms of use specify that users can make at most 20 requests per minute or they will otherwise have their IP banned for up to 24 hours.
+#### NOTE: To reproduce all findings and results from this project workflow, it is recommended to either use a virtual environment and install the dependencies from the “requirements.txt” file or simply install the dependencies on your local machine.
+
+To use a virtual machine:
+1) Run `python -m venv .venv` in the terminal of your project directory
+2) Activate the virtual environment by running `source .venv/bin/activate` in the terminal
+3) Install all library dependencies by running `pip install -r requirements.txt`
+4) To run all scripts in sequence and obtain the results, run `snakemake run_all –cores 1` in the terminal of your project directory
 
 ## References
