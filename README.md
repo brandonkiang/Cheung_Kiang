@@ -85,7 +85,7 @@ These are the steps to follow to produce our results.
 #### Acquire College Scorecard data
 The College Scorecard Dataset is accessible as an API, which was how it was accessed for this project. 
 1) Navigate to the College Scorecard Dataset website. This link will take you directly to the page where you can request an API key: [College Scorecard API Documentation](https://collegescorecard.ed.gov/data/api-documentation/). Once you have filled out the form, the API key will be emailed to you.
-2) Create a txt file within the [scripts folder](https://github.com/brandonkiang/Cheung_Kiang/tree/main/scripts) to store your API key.
+2) Create a txt file `apikey.txt` within the [scripts folder](https://github.com/brandonkiang/Cheung_Kiang/tree/main/scripts) to store your API key.
 3) Create a `.gitignore` file and include the text file containing the API key.
 4) After this, the provided script should be able to run with no issues.
 
