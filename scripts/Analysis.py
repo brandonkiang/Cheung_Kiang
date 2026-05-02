@@ -6,7 +6,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import mean_squared_error
 from sklearn.compose import make_column_selector
 import seaborn as sns
 import os
